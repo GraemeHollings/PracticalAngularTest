@@ -1,0 +1,26 @@
+<h1>{{title}}</h1>
+
+<!--This is an angular material table. Inside of each 'ng-container' is a column and cell for an entry from the fakeJson -->
+<div ng-app="userTable" ng-controller="myCTRL">
+  <table mat-table [dataSource]="myDataArray">
+
+    <ng-container matColumnDef="ID">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let user"> {{resp.data.ID} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let user"> {{resp.data.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Email">
+      <th mat-header-cell *matHeaderCellDef> Email </th>
+      <td mat-cell *matCellDef="let user"> {{resp.data.email}} </td>
+    </ng-container>
+
+  </table>
+
+  </div>
+
+
